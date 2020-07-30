@@ -22,12 +22,13 @@ var colorGuess3Var = document.querySelector("#colorGuess3");
 var colorGuess4Var = document.querySelector("#colorGuess4");
 var colorGuess5Var = document.querySelector("#colorGuess5");
 var colorGuess6Var = document.querySelector("#colorGuess6");
-var colorGuessVar = document.querySelectorAll(".square");
-colorGuessVar.style.background = "blue";
-debugger
+var colorGuessVar = document.querySelectorAll(".colorGuessAll");
+
+//console.log(colorGuessVar);
+//colorGuessVar[0].style.background = "blue";
+//debugger
 
 // Initialize other variables including total number of guesses (6 - hard, 3 - Easy)
-colorGuess1Var.style.background = "pink";
 var guessTotalNo = 6;
 var colorToGuessIndex = 0;
 var rgbVar = " ";
@@ -199,11 +200,11 @@ var displayColorToGuess = function() {
 }
 
 var displayColorGuesses = function() {
-    getColorFromArrays (3,5,7,0); 
-    moveColorToHTML () 
+  /*   getColorFromArrays (3,5,7,0); 
+    moveColorToHTML ()  */
 }
 
-var getColorFromArrays = function(r, g, b, i) {
+/* var getColorFromArrays = function(r, g, b, i) {
     redColorGuess = r;
     greenColorGuess = g;
     blueColorGuess = b;
@@ -214,6 +215,6 @@ var getColorFromArrays = function(r, g, b, i) {
 
 var moveColorToHTML = function() {
     colorGuess2Var.style.background = "purple";
-}
+} */
 
 }, 500);
