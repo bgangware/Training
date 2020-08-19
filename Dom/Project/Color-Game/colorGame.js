@@ -23,6 +23,7 @@ var colorGuess4Var = document.querySelector("#colorGuess4");
 var colorGuess5Var = document.querySelector("#colorGuess5");
 var colorGuess6Var = document.querySelector("#colorGuess6");
 var colorGuessVar = document.querySelectorAll(".colorGuessAll");
+var tryAgainVar = document.querySelector("#tryAgain");
 
 //console.log(colorGuessVar);
 //colorGuessVar[0].style.background = "blue";
@@ -48,12 +49,14 @@ var Guess4Array = [0,0,0];
 var Guess5Array = [0,0,0];
 var Guess6Array = [0,0,0];
 
-console.log(Guess1Array);
+
+
+/* console.log(Guess1Array);
 console.log(Guess2Array);
 console.log(Guess3Array);
 console.log(Guess4Array);
 console.log(Guess5Array);
-console.log(Guess6Array);
+console.log(Guess6Array); */
 
 /* var ColorGuessObj = {}; 
 ColorGuessObj.redColor = 1; 
@@ -77,31 +80,76 @@ startOver ()
 // Event listener for "Easy" text selection"
 easyVar.addEventListener("click",function() {
 console.log("Easy -- has been clicked");
+guessTotalNo = 3;
+startOver ()
 }) 
 
 // Event listener for "Hard" text selection"
 hardVar.addEventListener("click",function() {
 console.log("Hard -- has been clicked");
+guessTotalNo = 6;
+startOver ()
 }) 
 
 // Event listeners for the 6 color answers"
 colorGuess1Var.addEventListener("click",function() {
-console.log("guess 1 -- has been clicked " + guessTotalNo);
+console.log("guess 1 -- has been clicked " + guessTotalNo + " " + colorToGuessIndex + " ");
+    if (colorToGuessIndex == 0) {
+        correctGuess ();
+    }
+    else {
+        incorrectGuess (0);
+    }
 }) 
+
 colorGuess2Var.addEventListener("click",function() {
 console.log("guess 2 -- has been clicked " + guessTotalNo);
-}) 
+    if (colorToGuessIndex == 1) {
+        correctGuess ();
+    }
+    else {
+        incorrectGuess (1);
+    }
+})
+
 colorGuess3Var.addEventListener("click",function() {
 console.log("guess 3 -- has been clicked " + guessTotalNo);
+    if (colorToGuessIndex == 2) {
+        correctGuess ();
+    }
+    else {
+        incorrectGuess (2);
+    }
 }) 
+
 colorGuess4Var.addEventListener("click",function() {
 console.log("guess 4 -- has been clicked " + guessTotalNo);
+  if (colorToGuessIndex == 3) {
+        correctGuess ();
+    }
+    else {
+        incorrectGuess (3);
+    }
 }) 
+
 colorGuess5Var.addEventListener("click",function() {
 console.log("guess 5 -- has been clicked " + guessTotalNo);
+  if (colorToGuessIndex == 4) {
+        correctGuess ();
+    }
+    else {
+        incorrectGuess (4);
+    }
 }) 
+
 colorGuess6Var.addEventListener("click",function() {
 console.log("guess 6 -- has been clicked " + guessTotalNo);
+  if (colorToGuessIndex == 5) {
+        correctGuess ();
+    }
+    else {
+        incorrectGuess (5);
+    }
 }) 
 
 
@@ -110,17 +158,19 @@ var startOver = function() {
     chooseColorGuesses ()
     chooseColorToGuess ()
     displayColorToGuess ()
-    displayColorGuesses () 
+    displayColorGuesses ()
+    newColorsVar.innerHTML = "NEW COLORS"; 
 }
+
 
 
 // This routine choses 6 or 3 random colors and loads them into an array
 var chooseColorGuesses = function() 
     { 
     for (var i=0; i<3; i++) {
-        Guess4Array[i]=255
-        Guess5Array[i]=255
-        Guess6Array[i]=255
+        Guess4Array[i]=35
+        Guess5Array[i]=35
+        Guess6Array[i]=35
         }
     for (var i=0; i<3; i++) {    
         Guess1Array[i]= Math.floor((Math.random() * 255) + 1);   
@@ -200,21 +250,48 @@ var displayColorToGuess = function() {
 }
 
 var displayColorGuesses = function() {
-  /*   getColorFromArrays (3,5,7,0); 
-    moveColorToHTML ()  */
+    getColorFromArrays (Guess1Array[0],Guess1Array[1],Guess1Array[2],0); 
+    getColorFromArrays (Guess2Array[0],Guess2Array[1],Guess2Array[2],1); 
+    getColorFromArrays (Guess3Array[0],Guess3Array[1],Guess3Array[2],2); 
+    getColorFromArrays (Guess4Array[0],Guess4Array[1],Guess4Array[2],3); 
+    getColorFromArrays (Guess5Array[0],Guess5Array[1],Guess5Array[2],4); 
+    getColorFromArrays (Guess6Array[0],Guess6Array[1],Guess6Array[2],5);
+    tryAgainVar.innerHTML = " ";
+   
 }
 
-/* var getColorFromArrays = function(r, g, b, i) {
+var getColorFromArrays = function(r, g, b, i) {
     redColorGuess = r;
     greenColorGuess = g;
     blueColorGuess = b;
-    rgbVar = "pink";
-    colorGuessVar.style.background = "pink";
-    console.log(redColorGuess,greenColorGuess,blueColorGuess,i);
-}
+    
+    var rgbSettings = 'rgb(' + r + ',' + g + ',' + b + ')';
+    colorGuessVar[i].style.background = rgbSettings;
+    console.log(redColorGuess + " " + greenColorGuess + " " + blueColorGuess + " " + i + " " + rgbSettings);
+    }
 
-var moveColorToHTML = function() {
-    colorGuess2Var.style.background = "purple";
-} */
+var correctGuess = function() {
+    console.log("Correct Guess")
+    tryAgainVar.innerHTML = "Correct";
+    newColorsVar.innerHTML = "Play Again";
+    }
+
+
+var incorrectGuess = function(i) {
+    console.log("Incorrect Guess" + colorToGuessIndex);
+    colorGuessVar[i].style.background = "#232323";
+    tryAgainVar.innerHTML = "Try Again";
+    }
+
+
+
+startOver ();
+
+    /* rgbVar = "pink"; */
+     
+    /*  console.log(redColorGuess,greenColorGuess,blueColorGuess,i); */
+
+
+
 
 }, 500);
