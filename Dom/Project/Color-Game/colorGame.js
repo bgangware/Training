@@ -24,6 +24,7 @@ var colorGuess5Var = document.querySelector("#colorGuess5");
 var colorGuess6Var = document.querySelector("#colorGuess6");
 var colorGuessVar = document.querySelectorAll(".colorGuessAll");
 var tryAgainVar = document.querySelector("#tryAgain");
+var headerVar = document.querySelector("#topHeader");
 
 //console.log(colorGuessVar);
 //colorGuessVar[0].style.background = "blue";
@@ -159,7 +160,8 @@ var startOver = function() {
     chooseColorToGuess ()
     displayColorToGuess ()
     displayColorGuesses ()
-    newColorsVar.innerHTML = "NEW COLORS"; 
+    newColorsVar.innerHTML = "NEW COLORS";
+    headerVar.style.background = "steelblue"; 
 }
 
 
@@ -274,7 +276,15 @@ var correctGuess = function() {
     console.log("Correct Guess")
     tryAgainVar.innerHTML = "Correct";
     newColorsVar.innerHTML = "Play Again";
-    }
+    rgbSettings = 'rgb(' + redColor + ',' + greenColor + ',' + blueColor + ')';
+    for (var i=0; i < 6; i++) {
+    colorGuessVar[i].style.background = rgbSettings;    
+    };
+    rgbSettings = 'rgb(' + redColor + ',' + greenColor + ',' + blueColor + ')';
+    headerVar.style.background = rgbSettings;
+    }  
+
+
 
 
 var incorrectGuess = function(i) {
