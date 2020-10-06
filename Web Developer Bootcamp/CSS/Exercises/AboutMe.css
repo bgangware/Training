@@ -1,0 +1,29 @@
+h1 {color: pink;
+	/*border-width: 5px;
+	border-color: orange;
+	border-style: solid;*/
+	border: 10px solid #FF3377;
+	}
+
+h1 {background: blue;}
+
+h4 {color: blue;}
+
+li a {color: red;}
+
+h4 + ol {border: 4px solid green}
+
+li:nth-of-type(even) {color:  orange;}
+
+input [type="checkbox"]  {background: orange;}
+
+/*li {border: 4px solid brown}
+
+/*body {background: pink;}
+
+#cable {color: blue;}
+
+.done {text-decoration: line-through;}
+/*{background: url(https://upload.wikimedia.org/wikipedia/commons/3/3f/JPEG_example_flower.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;}*/

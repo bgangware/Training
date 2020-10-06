@@ -1,0 +1,13 @@
+h1 {color: green; 
+	font-family: 'Raleway', sans-serif;
+	text-align: center; }
+
+p {font-family: 'Indie Flower', cursive;
+	font-size: 20px; 
+	line-height: 2;}
+
+/*	font-family: 'Raleway', sans-serif;
+font-family: 'Indie Flower', cursive;*/
+
+
+span {font-size: 2em; font-weight: bolder; }

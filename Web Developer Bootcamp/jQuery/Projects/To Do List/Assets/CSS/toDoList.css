@@ -1,0 +1,40 @@
+body{
+    
+    background-image: linear-gradient(90deg,#2BC0E4,#EAECC6);
+}
+
+h1{
+    color:red
+    }
+
+#container{
+    
+    /* width: 100%;
+    height: 100%; 
+    position:fixed;
+    padding:0;
+    margin:0;
+    display: flex;
+    justify-content: center;
+ */
+}
+    
+#todoheaderdiv{
+    width: 360px;
+    height: 40px; 
+    background-color: #2980b9;
+    padding: 6px 0px 0px 10px;
+    font-size: 19px;
+    font-family: Arial;
+    color: white;
+    margin-top: 100px;
+    display: block;
+    /* vertical-align: middle; */
+}
+#tododiv{
+    background-color: white;
+    display: block;
+}
+#plus{
+    margin-left: 400px;
+}

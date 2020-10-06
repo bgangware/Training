@@ -1,0 +1,13 @@
+h1 {
+    color: purple;
+}
+
+.someClass {
+    color: rgba(38, 0, 255, 0.733);
+    border: 10px solid red;
+}
+
+img.resize {
+    max-width: 200px;
+    max-height: 200px;
+  }
