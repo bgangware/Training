@@ -1,40 +1,95 @@
 body{
     
     background-image: linear-gradient(90deg,#2BC0E4,#EAECC6);
+    font-family: arial;
 }
-
-h1{
-    color:red
-    }
 
 #container{
     
-    /* width: 100%;
-    height: 100%; 
-    position:fixed;
-    padding:0;
-    margin:0;
-    display: flex;
-    justify-content: center;
- */
+    width: 360px;
+    /* height: 40px;  */
+    margin: 100px auto;
+    
 }
     
-#todoheaderdiv{
-    width: 360px;
-    height: 40px; 
-    background-color: #2980b9;
-    padding: 6px 0px 0px 10px;
-    font-size: 19px;
-    font-family: Arial;
+#todoheaderh1{
+    
+    background: #2980b9;
+    padding: 10px 20px 10px 20px;
+    font-size: 24px;
+    /* font-family: Arial; */
     color: white;
-    margin-top: 100px;
-    display: block;
-    /* vertical-align: middle; */
+    /* margin-top: 100px; */
+    /* display: block; */
+    margin-bottom: 0px;
+    /* width: 360px;
+    height: 40px;  */
+    /* vertical-align: middle;  */
+/*     margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; */
 }
 #tododiv{
-    background-color: white;
+    /* background-color: white; */
     display: block;
+  
 }
 #plus{
-    margin-left: 400px;
+    margin-left: 150px;
 }
+li{
+    
+    background-color: white;
+    /* padding: 6px 0px 0px 15px; */
+    font-size: 19px;
+    /* font-family: Arial; */
+    color: #666;
+    display: list-item; 
+    list-style-type: none;
+    line-height: 40px;
+    padding-left: 23px; 
+    font-weight: 100;
+    height: 40px;
+   }
+
+ul{
+    padding: 0 0 0 0;
+    width: 360px;
+    height: 40px;
+    
+}
+
+input{
+    background-color: #f7f7f7;
+    padding: 13px 13px 13px 20px;
+    width: 360px; 
+    border: 3px solid;
+    /* border-color: "#f7f7f7"; */
+    border-color: #f7f7f7;
+    /* x.style.display = "none" */
+    /* display: none; */
+    
+}
+
+.completedTodo{
+    text-decoration: line-through;
+}
+
+.delete{
+        color: white;    
+}
+
+.deleteLine{
+    padding-left: 0px; 
+}
+.deleteText{
+    padding-left: 23px;
+}
+
+.deleteIcon{
+    background-color: #e74c3c;
+    padding: 9px;
+    /* display: none; */
+    display: none;
+  }
