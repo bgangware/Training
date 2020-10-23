@@ -60,9 +60,13 @@ $("ul").on("click","li",function() {
 });
 
 $("li").hover(function() {
+
+    let text = $(this).text();
+    debugger
     // $(this).toggleClass("completedTodo");
     // $(this).css("display", "inline");
     // let span=$(this).getElements("span");
+    $(this).empty().append('<span class="deleteIcon"> <i class="fas fa-trash-alt fa-xs delete",></i></span><span class="deleteText">' + text + '</span>');
     console.log("li hover");
     
 });
